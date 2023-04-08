@@ -11,3 +11,5 @@ const pinia = createPinia()
 pinia.use(persist)
 // 2 导出pinia实例
 export default pinia
+
+export * from './modules/user'
