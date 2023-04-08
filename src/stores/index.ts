@@ -12,4 +12,5 @@ pinia.use(persist)
 // 2 导出pinia实例
 export default pinia
 
+/* 在index.ts对modules中store仓库做统一导出 */
 export * from './modules/user'

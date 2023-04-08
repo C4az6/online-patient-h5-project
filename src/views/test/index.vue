@@ -10,6 +10,8 @@
     <p>
       <button @click="store.delUser()">退出登录</button>
     </p>
+
+    <van-button type="success">按钮</van-button>
   </div>
 </template>
 
