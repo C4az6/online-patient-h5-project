@@ -13,8 +13,8 @@ const router = createRouter({
     hash兼容性比history更好，history是H5标准提出的.
 
  */
-  // history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHashHistory(),
   // 路由配置数组
   routes: [
     {
