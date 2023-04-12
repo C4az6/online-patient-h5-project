@@ -22,6 +22,7 @@ export const useUserStore = defineStore(
     空对象/空数组就不要通过泛型变量来指定类型了，直接通过断言指定类型即可。
   */
     const user = ref({} as User)
+    const testData = ref<number[]>([1, 2, 3, 4, 5])
 
     /* 
     用户相关方法：
@@ -40,12 +41,21 @@ export const useUserStore = defineStore(
     // 返回定义的全局变量和方法
     return {
       user,
+      testData,
       setUser,
       delUser
     }
   },
-  {
-    // 开启当前模块的持久化
+  /* {
+    // 开启当前模块的持久化,默认存储全部数据到 localStorage中，以store id 作为存储的key
     persist: true
+  } */
+  {
+    // 自定义持久化
+    persist: {
+      key: 'youkewang.top',
+      // 指定要存储的数据
+      paths: ['testData']
+    }
   }
 )
