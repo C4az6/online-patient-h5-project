@@ -18,6 +18,13 @@ const router = createRouter({
   // 路由配置数组
   routes: [
     {
+      path: '/',
+      name: 'default',
+      redirect: {
+        path: '/test'
+      }
+    },
+    {
       path: '/test',
       name: 'test',
       component: Test
