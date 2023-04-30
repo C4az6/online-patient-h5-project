@@ -21,7 +21,7 @@ const router = createRouter({
       path: '/',
       name: 'default',
       redirect: {
-        path: '/test'
+        path: '/login'
       }
     },
     {

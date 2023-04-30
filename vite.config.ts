@@ -14,6 +14,7 @@ export default defineConfig({
       // 开启 props 解构保持响应式
       reactivityTransform: true
     }),
+    /* 配置vant组件自动按需引入并且注册 */
     Components({
       // 禁止为全局组件自动添加TS声明
       dts: false,

@@ -1,17 +1,21 @@
 <template>
-  <div>
-    Login Page
-
-    <p>
-      <video :controls="true" @click="handleVideoClick"
-        src="https://txmov2.a.yximgs.com/upic/2021/02/24/04/BMjAyMTAyMjQwNDIxMjJfMTQ3NTc4ODIwMV80NDkxNjA1MzE2NF8xXzM=_b_B06fcbbbb4d4a688aefd082def5176d6b.mp4"></video>
-    </p>
-  </div>
+  <cp-nav-bar middle="登录/注册" right="注册" @clickRight="handleClickRight"></cp-nav-bar>
+  <!-- <div>LOGIN PAGE</div> -->
 </template>
 
 <script setup lang="ts">
-const handleVideoClick = () => {
-  console.log('666')
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const handleClickRight = () => {
+  if (history.state?.back) {
+    // 存在回调地址就返回
+    console.log(history)
+  } else {
+    // 否则返回首页
+    router.push('/')
+  }
 }
 </script>
 
