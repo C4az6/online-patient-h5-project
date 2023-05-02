@@ -6,6 +6,8 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import postcsspxtoviewport8plugin from 'postcss-px-to-viewport-8-plugin'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,6 +21,10 @@ export default defineConfig({
       // 禁止为全局组件自动添加TS声明
       dts: false,
       resolvers: [VantResolver()]
+    }),
+    createSvgIconsPlugin({
+      // 指定图标文件夹，绝对路径（NODE代码）
+      iconDirs: [path.resolve(process.cwd(), 'src/icons')]
     })
   ],
   resolve: {

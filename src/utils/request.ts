@@ -51,7 +51,7 @@ service.interceptors.response.use(
       showToast(res.data?.message || '业务处理失败')
       return Promise.reject(res.data)
     }
-    console.log('>>> resposne data: ', res)
+    // console.log('>>> resposne data: ', res)
     //  业务处理成功，返回响应数据
     return res.data
   },

@@ -10,3 +10,6 @@ export type User = {
   avatar: string
   id: string
 }
+
+// 验证码登录接口返回数据类型
+export type CodeType = 'login' | 'register' | 'changeMobile' | 'forgetPassword' | 'bindMobile'
